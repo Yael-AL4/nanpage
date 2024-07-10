@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>NAN Squad</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .top-bar {
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+            background-color: black;
+        }
+
+        .top-bar a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            padding: 10px 20px;
+            background-color: black;
+            border: 1px solid white;
+            border-radius: 5px;
+            margin: 0 5px;
+        }
+
+        .section {
+            display: none;
+            padding: 20px;
+            background-color: black;
+            color: white;
+        }
+
+        .section.active {
+            display: block;
+        }
+
+        .content-box {
+            background-color: white;
+            color: black;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            width: 80%;
+            max-width: 600px;
+            margin: 0 auto 20px auto;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .content-box:hover {
+            background-color: #f0f0f0;
+        }
+
+        #home img {
+            width: 100%;
+            max-width: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top-bar">
+        <a href="#home" onclick="showSection('home')">Inicio</a>
+        <a href="#doxes" onclick="showSection('doxes')">Doxes</a>
+        <a href="#cracked" onclick="showSection('cracked')">Cracked</a>
+    </div>
+
+    <div id="home" class="section active">
+        <center>
+            <img src="https://steamuserimages-a.akamaihd.net/ugc/860608952292531464/84B7EC1BF2F39338FABA3B7941AF7C957E83401A/?imw=268&imh=268&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true" alt="NAN Squad">
+        </center>
+        <center>
+            <marquee>
+                <h1>#NANSquad #hewillneverdie</h1>
+            </marquee>
+        </center>
+    </div>
+
+    <div id="doxes" class="section">
+        <div class="content-box" onclick="showSection('d1')">
+            <h2>Vacant</h2>
+            <p>Doxeado: Vacant</p>
+            <p>author: Vacant</p>
+        </div>
+        <div class="content-box" onclick="showSection('d2')">
+            <h2>Vacant</h2>
+            <p>Doxeado: Vacant</p>
+            <p>author: Vacant</p>
+        </div>
+    </div>
+
+    <div id="d1" class="section">
+        <div class="content-box">
+            <h2>Vacant</h2>
+            <p>Doxeado: Vacant</p>
+            <p>author: Vacant</p>
+        </div>
+    </div>
+
+    <div id="d2" class="section">
+        <div class="content-box">
+            <h2>Vacant</h2>
+            <p>Doxeado: Vacant</p>
+            <p>author: Vacant</p>
+        </div>
+    </div>
+
+    <div id="cracked" class="section">
+        <div class="content-box" onclick="showSection('c1')">
+            <h2>4p r bot</h2>
+            <p>r bot premium de https://4pgang.sell.app</p>
+            <p>cracked by: Yael</p>
+        </div>
+        <div class="content-box" onclick="showSection('c2')">
+            <h2>Vacant</h2>
+            <p>Vacant</p>
+            <p>author: Vacant</p>
+        </div>
+    </div>
+
+    <div id="c1" class="section">
+        <div class="content-box">
+            <h2>4p r bot</h2>
+            <p>link de descarga de la mierda de 4p: <a href="https://lc.cx/ZNXzZc" target="_blank">https://lc.cx/ZNXzZc</a></p>
+            <p>img de el r bot: <a href="https://ibb.co/552Kg3f" target="_blank">https://ibb.co/552Kg3f</a></p>
+            <p>tienda de 4p: <a href="https://4pgang.sell.app" target="_blank">https://4pgang.sell.app</a></p>
+        </div>
+    </div>
+
+    <div id="c2" class="section">
+        <div class="content-box">
+            <h2>Vacant</h2>
+            <p>Vacant</p>
+        </div>
+    </div>
+
+    <script>
+        function showSection(sectionId) {
+            // Oculta todas las secciones
+            var sections = document.querySelectorAll('.section');
+            sections.forEach(function (section) {
+                section.classList.remove('active');
+            });
+
+            // Muestra la sección seleccionada
+            var selectedSection = document.getElementById(sectionId);
+            if (selectedSection) {
+                selectedSection.classList.add('active');
+            }
+        }
+
+       ¿
+        window.addEventListener('load', function() {
+            showSection('home');
+        });
+
+     
+        window.addEventListener('hashchange', function() {
+            var hash = window.location.hash.substring(1);
+            if (hash) {
+                showSection(hash);
+            }
+        });
+    </script>
+</body>
+
+</html>
